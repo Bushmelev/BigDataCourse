@@ -44,7 +44,7 @@
   <configuration>
       <property>
           <name>fs.defaultFS</name>
-          <value>hdfs://team-7-nn:9000</value>
+          <value>hdfs://team-37-nn:9000</value>
       </property>
   </configuration>
   ```
