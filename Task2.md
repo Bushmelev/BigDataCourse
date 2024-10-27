@@ -45,4 +45,4 @@
 * Создайте символическую ссылку на конфигурационный файл с помощью команды `sudo ln -sf /etc/nginx/sites-available/nn /etc/nginx/sites-enabled/nn`
 * Перезагрузите конфигурацию с помощью команды `sudo systemctl reload nginx`
 * Скопируйте конфигурационные файлы с помощью команд `sudo cp /etc/nginx/sites-available/nn /etc/nginx/sites-available/ya` и `sudo cp /etc/nginx/sites-available/nn /etc/nginx/sites-available/dh`
-* 
+* Отредактируйте конфигурационный файл веб-интерфейса YARN, открыв его с помощью команды `sudo nano /etc/nginx/sites-available/ya`, и заменив порт 9870 на 8088 для полей `server` и `location`
