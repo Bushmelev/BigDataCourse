@@ -39,7 +39,7 @@
   ```
   Повторите данное действие на всех `dataNode`, либо же скопируйте с помощью команды `scp ~/.profile team-37-dn-0:/home/hadoop`
 * Добавьте строку `JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64` в файл с помощью команды `nano hadoop-3.4.0/etc/hadoop/hadoop-env.sh`. Повторите данное действие и на остальных `dataNode`.
-* С помощью команды `nano hadoop-3.4.0/etc/hadoop/core-site.xml` задайте следующую конфигурацию
+* С помощью команды `nano hadoop-3.4.0/etc/hadoop/core-site.xml` задайте на всех нодах следующую конфигурацию 
   ```
   <configuration>
       <property>
@@ -48,7 +48,7 @@
       </property>
   </configuration>
   ```
-* С помощью команды `nano hadoop-3.4.0/etc/hadoop/hdfs-site.xml` задайте следующую конфигурацию
+* С помощью команды `nano hadoop-3.4.0/etc/hadoop/hdfs-site.xml` задайте на всех нодах следующую конфигурацию
   ```
   <configuration>
       <property>
@@ -57,7 +57,7 @@
       </property>
   </configuration>
   ```
-* С помощью команды `nano hadoop-3.4.0/etc/hadoop/workers` установите в файле значения
+* С помощью команды `nano hadoop-3.4.0/etc/hadoop/workers` установите на всех нодах значения
   ```
   team-37-nn
   team-37-dn-00
