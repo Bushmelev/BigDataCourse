@@ -47,4 +47,5 @@
 * Скопируйте конфигурационные файлы для YARN и historyserver с помощью команд `sudo cp /etc/nginx/sites-available/nn /etc/nginx/sites-available/ya` и `sudo cp /etc/nginx/sites-available/nn /etc/nginx/sites-available/dh`
 * Отредактируйте конфигурационный файл веб-интерфейса YARN, открыв его с помощью команды `sudo nano /etc/nginx/sites-available/ya`, и заменив порт 9870 на 8088 для полей `server` и `location`
 * Отредактируйте конфигурационный файл веб-интерфейса historyserver, открыв его с помощью команды `sudo nano /etc/nginx/sites-available/dh`, и заменив порт 9870 на 19888 для полей `server` и `location`
-* 
+* Включите веб-хосты YARN и historyserver с помощью команд `sudo ln -sf /etc/nginx/sites-available/ya /etc/nginx/sites-enabled/ya` и `sudo ln -sf /etc/nginx/sites-available/dh /etc/nginx/sites-enabled/dh`
+* Перезагрузите конфигурацию с помощью команды `sudo systemctl reload nginx`
