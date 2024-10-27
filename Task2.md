@@ -23,4 +23,16 @@
     </property>
 </configuration>
 ```
+* С помощью команды `nano hadoop-3.4.0/etc/hadoop/yarn-site.xml` задайте конфигурацию YARN на
+```
+<configuration>
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.env-whitelist</name>
+        <value>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_HOM>    </property>
+</configuration>
+```
 * 
