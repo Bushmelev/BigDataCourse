@@ -36,7 +36,7 @@
     </configuration>
     ```
 * Повторите предыдущие два шага на `dataNode`s
-* Перейдите в папку hadoop с помощью команды `cd ~/hadoop-3.4.0/` и запустите YARN с помощью команды `sbin/start-yarn.sh`
+* Перейдите в папку hadoop `nameNode` с помощью команды `cd ~/hadoop-3.4.0/` и запустите YARN с помощью команды `sbin/start-yarn.sh`
 * Запустите historyserver с помощью команды `mapred --daemon start historyserver`
 * Вернитесь на `jumpNode` под пользователем `team` и скопируйте конфиг по умолчанию с помощью команды `sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/nn`
 * Отредактируйте конфигурационный файл с помощью команды `sudo nano /etc/nginx/sites-available/nn` следующим образом:
