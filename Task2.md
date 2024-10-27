@@ -37,4 +37,4 @@
 ```
 * Повторите предыдущие два шага на `dataNode`s
 * Перейдите в папку hadoop с помощью команды `cd ~/hadoop-3.4.0/` и запустите YARN с помощью команды `sbin/start-yarn.sh`
-* 
+* Запустите historyserver с помощью команды `mapred --daemon start historyserver`
