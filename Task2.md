@@ -42,3 +42,5 @@
 * Отредактируйте конфигурационный файл с помощью команды `sudo nano /etc/nginx/sites-available/nn` следующим образом:
   * В поле `server` измените первую строчку с `listen 80 default_server;` на  `listen 9870 default_server;`; закомментируйте строчку `listen [::]:80 default_server;`
   * В поле `location` закомментируйте строчку `try_files $uri $uri/ =404;` и добавьте новую строчку `proxy_pass http://team-37-nn:9870;`
+* Создайте символическую ссылку на конфигурационный файл с помощью команды `sudo ln -sf /etc/nginx/sites-available/nn /etc/nginx/sites-enabled/nn`
+* Перезагрузите конфигурацию с помощью команды `sudo systemctl reload nginx`
