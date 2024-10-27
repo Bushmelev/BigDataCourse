@@ -31,15 +31,15 @@
 * Повторите предыдущий шаг для всех остальных нод
 * С помощью команды `scp hadoop-3.4.0.tar.gz team-37-nn:/home/hadoop` скопируйте дистрибутив на все остальные виртуальные машины
 * С  помощью команды `tar -xvzf hadoop-3.4.0.tar.gz` распакуйте дистрибутив на всех машинах
-* В файле `.profile` с помощью команды `nano ~/.profile` задайте следующие переменные
+* Перейтите на `nameNode` и в файле `.profile` с помощью команды `nano ~/.profile` задайте следующие переменные
   ```
   export HADOOP_HOME=/home/hadoop/hadoop-3.4.0
   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
   export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
   ```
-  Повторите данное действие на всех нодах, либо же скопируйте файл на остальные ноды с помощью команды `scp ~/.profile team-37-nn:/home/hadoop`
-* Добавьте строку `JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64` в файл с помощью команды `nano hadoop-3.4.0/etc/hadoop/hadoop-env.sh`. Повторите данное действие и на остальных нодах.
-* С помощью команды `nano hadoop-3.4.0/etc/hadoop/core-site.xml` добавьте в блок `configuration` добавьте следующее
+  Повторите данное действие на всех `dataNode`, либо же скопируйте с помощью команды `scp ~/.profile team-37-dn-0:/home/hadoop`
+* Добавьте строку `JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64` в файл с помощью команды `nano hadoop-3.4.0/etc/hadoop/hadoop-env.sh`. Повторите данное действие и на остальных `dataNode`.
+* С помощью команды `nano hadoop-3.4.0/etc/hadoop/core-site.xml` задайте следующую конфигурацию
   ```
   <configuration>
       <property>
@@ -48,3 +48,4 @@
       </property>
   </configuration>
   ```
+*
