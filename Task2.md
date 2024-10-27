@@ -44,5 +44,7 @@
   * В поле `location` закомментируйте строчку `try_files $uri $uri/ =404;` и добавьте новую строчку `proxy_pass http://team-37-nn:9870;`
 * Создайте символическую ссылку на конфигурационный файл с помощью команды `sudo ln -sf /etc/nginx/sites-available/nn /etc/nginx/sites-enabled/nn`
 * Перезагрузите конфигурацию с помощью команды `sudo systemctl reload nginx`
-* Скопируйте конфигурационные файлы с помощью команд `sudo cp /etc/nginx/sites-available/nn /etc/nginx/sites-available/ya` и `sudo cp /etc/nginx/sites-available/nn /etc/nginx/sites-available/dh`
+* Скопируйте конфигурационные файлы для YARN и historyserver с помощью команд `sudo cp /etc/nginx/sites-available/nn /etc/nginx/sites-available/ya` и `sudo cp /etc/nginx/sites-available/nn /etc/nginx/sites-available/dh`
 * Отредактируйте конфигурационный файл веб-интерфейса YARN, открыв его с помощью команды `sudo nano /etc/nginx/sites-available/ya`, и заменив порт 9870 на 8088 для полей `server` и `location`
+* Отредактируйте конфигурационный файл веб-интерфейса historyserver, открыв его с помощью команды `sudo nano /etc/nginx/sites-available/dh`, и заменив порт 9870 на 19888 для полей `server` и `location`
+* 
