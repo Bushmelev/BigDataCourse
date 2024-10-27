@@ -57,4 +57,9 @@
       </property>
   </configuration>
   ```
-*
+* С помощью команды `nano hadoop-3.4.0/etc/hadoop/workers` установите в файле значения
+  ```
+  team-37-nn
+  team-37-dn-00
+  team-37-dn-01
+  ```
