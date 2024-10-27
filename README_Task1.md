@@ -38,5 +38,5 @@
   export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
   ```
   Повторите данное действие на всех нодах, либо же скопируйте файл на остальные ноды с помощью команды `scp ~/.profile team-37-nn:/home/hadoop`
-* Добавьте строку `JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64` в файл с помощью команды `nano hadoop-3.4.0/etc/hadoop/hadoop-env.sh`
+* Добавьте строку `JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64` в файл с помощью команды `nano hadoop-3.4.0/etc/hadoop/hadoop-env.sh`. Повторите данное действие и на остальных нодах.
 * 
