@@ -48,4 +48,13 @@
       </property>
   </configuration>
   ```
+* С помощью команды `nano hadoop-3.4.0/etc/hadoop/hdfs-site.xml` задайте следующую конфигурацию
+  ```
+  <configuration>
+      <property>
+          <name>dfs.replication</name>
+        <value>3</value>
+      </property>
+  </configuration>
+  ```
 *
