@@ -37,7 +37,7 @@
   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
   export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
   ```
-  Повторите данное действие на всех `dataNode`, либо же скопируйте с помощью команды `scp ~/.profile team-37-dn-0:/home/hadoop`
+  Повторите данное действие на всех `dataNode`, либо же скопируйте с помощью команды `scp ~/.profile team-37-dn-00:/home/hadoop`
 * Добавьте строку `JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64` в файл с помощью команды `nano hadoop-3.4.0/etc/hadoop/hadoop-env.sh`. Повторите данное действие и на остальных `dataNode`.
 * С помощью команды `nano hadoop-3.4.0/etc/hadoop/core-site.xml` задайте на всех нодах следующую конфигурацию 
   ```
