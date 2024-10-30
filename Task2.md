@@ -11,18 +11,18 @@
 Последовательность действий для разворачивания YARN:
 * Под пользователем `hadoop` перейдите на `nameNode`
 * С помощью команды `nano hadoop-3.4.0/etc/hadoop/mapred-site.xml` измените конфигурацию на
-```
-<configuration>
-    <property>
-        <name>mapreduce.framework.name</name>
-        <value>yarn</value>
-    </property>
-    <property>
-        <name>mapreduce.application.classpath</name>
-        <value>$HADOOP_HOME/share/hadoop/mapreduce/*:$HADOOP_HOME/share/hadoop/mapreduce/lib/*</value>
-    </property>
-</configuration>
-```
+    ```
+    <configuration>
+        <property>
+            <name>mapreduce.framework.name</name>
+            <value>yarn</value>
+        </property>
+        <property>
+            <name>mapreduce.application.classpath</name>
+            <value>$HADOOP_HOME/share/hadoop/mapreduce/*:$HADOOP_HOME/share/hadoop/mapreduce/lib/*</value>
+        </property>
+    </configuration>
+    ```
 * С помощью команды `nano hadoop-3.4.0/etc/hadoop/yarn-site.xml` задайте конфигурацию YARN на
     ```
     <configuration>
