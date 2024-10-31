@@ -49,3 +49,12 @@
 * Отредактируйте конфигурационный файл веб-интерфейса historyserver, открыв его с помощью команды `sudo nano /etc/nginx/sites-available/dh`, и заменив порт 9870 на 19888 для полей `server` и `location`
 * Включите веб-хосты YARN и historyserver с помощью команд `sudo ln -sf /etc/nginx/sites-available/ya /etc/nginx/sites-enabled/ya` и `sudo ln -sf /etc/nginx/sites-available/dh /etc/nginx/sites-enabled/dh`
 * Перезагрузите конфигурацию с помощью команды `sudo systemctl reload nginx`
+* Установите `apache2-utils` с помощью команды `sudo apt install apache2-utils`
+* На `jumpNode` перейдите в директорию `/etc` и создайте новую директорию с помощью команды `mkdir apache2`
+* С помощью команды `sudo htpasswd -c /etc/apache2/.htpasswd team` создайте пользователя `team` и задайте к нему пароль (используйте тот же пароль, что и для доступа к кластеру)
+* Для несанкционированного доступа к кластеру с помощью веб-интерфейсов YARN и historyserver для поднятых страниц в поне `server` добавьте
+  ```
+  auth_basic           "Web UI";
+  auth_basic_user_file /etc/apache2/.htpasswd;
+  ```
+* Перезагрузите nginx с помощью команды `sudo systemctl reload nginx`
