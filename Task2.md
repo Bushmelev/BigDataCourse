@@ -32,7 +32,8 @@
         </property>
         <property>
             <name>yarn.nodemanager.env-whitelist</name>
-            <value>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_HOM>    </property>
+            <value>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_HOME
+    </property>
     </configuration>
     ```
 * Повторите предыдущие два шага на `dataNode`s
