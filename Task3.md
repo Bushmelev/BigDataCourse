@@ -29,7 +29,6 @@
    CREATE DATABASE metastore WITH OWNER hive;
    ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO hive;
    GRANT ALL PRIVILEGES ON DATABASE "metastore" TO hive;
-   \q
    ```
 
 4. Настроем сетевой доступ для базы данных:
@@ -59,7 +58,6 @@
    ```bash
    sudo apt install postgresql-client-16
    psql -h team-37-nn -p 5432 -U hive -W -d metastore
-   \q
    ```
 
 3. Переключимся на пользователя hadoop и установим Hive:
@@ -151,7 +149,6 @@
    ```bash
    beeline -u jdbc:hive2://team-37-jn:5433
    CREATE DATABASE test;
-   \q
    ```
 
 5. Загрузим данные:
