@@ -102,7 +102,7 @@
      </property>
      <property>
        <name>javax.jdo.option.ConnectionURL</name>
-       <value>jdbc:postgresql://team-37-nn:5432/metastore</value>
+       <value>jdbc:postgresql://team-37-dn-00:5432/metastore</value>
      </property>
      <property>
        <name>javax.jdo.option.ConnectionDriverName</name>
