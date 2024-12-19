@@ -112,12 +112,11 @@
    ```
 
 
-6. Настроим переменные среды:
+6. Настроим переменные среды в файле `hive-env.sh`, перед этим выволнив `cp  hive-env.sh.template  hive-env.sh`:
    ```bash
    export HIVE_HOME=/home/hadoop/apache-hive-4.0.1-bin
    export HIVE_CONF_DIR=$HIVE_HOME/conf
    export HIVE_AUX_JARS_PATH=$HIVE_HOME/lib/*
-   export PATH=$PATH:$HIVE_HOME/bin
    ```
 
 ### Инициализация и запуск Hive
@@ -147,7 +146,7 @@
 
 4. Подключаемся к Hive через консоль и создаем базу данных:
    ```bash
-   beeline -u jdbc:hive2://team-37-jn:5433
+   beeline -u jdbc:hive2://team-37-nn:5433
    CREATE DATABASE test;
    ```
 
@@ -161,31 +160,31 @@
 
    - Подключимся к базе данных Hive и создадим таблицу:
      ```bash
-     beeline -u jdbc:hive2://team-37-jn:5433
+     beeline -u jdbc:hive2://team-37-nn:5433
 
-      CREATE TABLE IF NOT EXISTS test.company(
-        company_number string,
-        company_type string,
-        office_address string,
-        incorporation_date string,
-        jurisdiction string,
-        company_status string,
-        account_type string,
-        company_name string,
-        sic_codes string,
-        date_of_cessation string,
-        next_accounts_overdue string,
-        confirmation_statement_overdue string,
-        owners string,
-        officers string,
-        average_number_employees_during_period string,
-        current_assets string,
-        last_accounts_period_end string,
-        company_url string)
-        ROW FORMAT DELIMITED FIELDS TERMINATED BY '|';
+     CREATE TABLE IF NOT EXISTS test.company(
+      company_number string,
+      company_type string,
+      office_address string,
+      incorporation_date string,
+      jurisdiction string,
+      company_status string,
+      account_type string,
+      company_name string,
+      sic_codes string,
+      date_of_cessation string,
+      next_accounts_overdue string,
+      confirmation_statement_overdue string,
+      owners string,
+      officers string,
+      average_number_employees_during_period string,
+      current_assets string,
+      last_accounts_period_end string,
+      company_url string)
+      ROW FORMAT DELIMITED FIELDS TERMINATED BY '|';
      ```
      - Загрузим данные в таблицу:
      ```bash
-      LOAD DATA INPATH '/input/companies.csv' INTO TABEL test.company;
+      LOAD DATA INPATH '/input/companies.csv' INTO TABLE test.company;
      ```
 
