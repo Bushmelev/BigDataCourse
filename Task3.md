@@ -57,7 +57,7 @@
 2. Установим клиент PostgreSQL:
    ```bash
    sudo apt install postgresql-client-16
-   psql -h team-37-nn -p 5432 -U hive -W -d metastore
+   psql -h team-37-dn-00 -p 5432 -U hive -W -d metastore
    ```
 
 3. Переключимся на пользователя hadoop и установим Hive:
