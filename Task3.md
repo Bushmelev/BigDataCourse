@@ -73,7 +73,7 @@
    wget https://jdbc.postgresql.org/download/postgresql-42.7.4.jar
    ```
 
-5. Создадим файл `hive-site.xml` в apache-hive-4.0.1-bin/conf:
+5. Создадим файл `hive-site.xml` в `apache-hive-4.0.1-bin/conf`:
    ```xml
    <configuration>
      <property>
