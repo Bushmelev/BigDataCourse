@@ -21,7 +21,7 @@
    sudo apt install postgresql
    ```
 
-3. Создадим и настроим базу данных для Hive:
+3. Создадим и настроим базу данных для Hive на dn-00:
    ```bash
    sudo -i -u postgres
    psql
