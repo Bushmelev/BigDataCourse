@@ -9,7 +9,7 @@
 * Чичулин Мирослав
 
 ## Последовательность действий для установки и настройки Hive Hadoop:
-### Развертывание PostgreSQL на NameNode
+### Развертывание PostgreSQL на DataNode
 
 1. Подключимся к NameNode:
    ```bash
@@ -34,12 +34,12 @@
 4. Настроем сетевой доступ для базы данных:
    - Открываем файл `/etc/postgresql/16/main/postgresql.conf` и настраиваем:
      ```plaintext
-     listen_addresses = 'team-37-nn'
+     listen_addresses = 'team-37-dn-00'
      ```
 
    - Откроем файл `/etc/postgresql/16/main/pg_hba.conf` и пропишем наш IP:
      ```plaintext
-     host metastore hive 192.168.1.150/32 password
+     host metastore hive 192.168.1.151/32 password
      ```
 
 5. Перезапустим PostgreSQL:
@@ -47,7 +47,7 @@
    sudo systemctl restart postgresql
    ```
 
-### Установка и настройка Hive на JumpNode
+### Установка и настройка Hive на NameNode
 
 1. Подключимся к JumpNode:
    ```bash
