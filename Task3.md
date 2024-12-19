@@ -49,9 +49,9 @@
 
 ### Установка и настройка Hive на NameNode
 
-1. Подключимся к JumpNode:
+1. Подключимся к NameNode:
    ```bash
-   ssh team-37-jn
+   ssh team-37-nn
    ```
 
 2. Установим клиент PostgreSQL:
