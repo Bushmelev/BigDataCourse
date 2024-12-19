@@ -21,7 +21,7 @@
    sudo apt install postgresql
    ```
 
-3. Создадим и настроим базу данных для Hive на dn-00:
+3. Создадим и настроим базу данных для Hive на nn:
    ```bash
    sudo -i -u postgres
    psql
@@ -34,7 +34,7 @@
 4. Настроем сетевой доступ для базы данных:
    - Открываем файл `/etc/postgresql/16/main/postgresql.conf` и настраиваем:
      ```plaintext
-     listen_addresses = 'team-37-dn-00'
+     listen_addresses = 'team-37-nn'
      ```
 
    - Откроем файл `/etc/postgresql/16/main/pg_hba.conf` и пропишем наш IP:
@@ -57,7 +57,7 @@
 2. Установим клиент PostgreSQL:
    ```bash
    sudo apt install postgresql-client-16
-   psql -h team-37-dn-00 -p 5432 -U hive -W -d metastore
+   psql -h team-37-nn -p 5432 -U hive -W -d metastore
    ```
 
 3. Переключимся на пользователя hadoop и установим Hive:
@@ -102,7 +102,7 @@
      </property>
      <property>
        <name>javax.jdo.option.ConnectionURL</name>
-       <value>jdbc:postgresql://team-37-dn-00:5432/metastore</value>
+       <value>jdbc:postgresql://team-37-nn:5432/metastore</value>
      </property>
      <property>
        <name>javax.jdo.option.ConnectionDriverName</name>
@@ -112,7 +112,7 @@
    ```
 
 
-6. Насторем переменные среды:
+6. Настроим переменные среды:
    ```bash
    export HIVE_HOME=/home/hadoop/apache-hive-4.0.1-bin
    export HIVE_CONF_DIR=$HIVE_HOME/conf
