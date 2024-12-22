@@ -38,3 +38,8 @@
    `sudo ln -sf /etc/nginx/sites-available/sp /etc/nginx/sites-enabled/sp`
    
    Перезагрузите конфигурацию с помощью команды `sudo systemctl reload nginx`
+6. Запустим worker. Для этого в папке со spark выполним
+   ```bash
+   mkdir worker
+   sbin/start-worker.sh spark://team-37-nn:7077 -d /home/hadoop/spark-3.5.4-bin-without-hadoop/worker -h team-37-nn
+   ```
