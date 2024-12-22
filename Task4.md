@@ -36,4 +36,5 @@
    ```
    Отредактируйте конфигурационный, заменив номер порта на 8080. Создайте символическую ссылку с помощью команды
    `sudo ln -sf /etc/nginx/sites-available/sp /etc/nginx/sites-enabled/sp`
+   
    Перезагрузите конфигурацию с помощью команды `sudo systemctl reload nginx`
