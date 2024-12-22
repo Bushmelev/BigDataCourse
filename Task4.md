@@ -22,5 +22,10 @@
 3. Зададим окружение:
    ```bash
    export SPARK_HOME=/home/hadoop/spark-3.5.4-bin-without-hadoop
-   export PATH=$PATH: $SPARK_HOME/bin
+   export PATH=$PATH:$SPARK_HOME/bin
+   export SPARK_DIST_CLASSPATH=$SPARK_HOME/jars/*:$(hadoop classpath)
+   ```
+4. Перейдем в папку со Spark и запустим мастер-узел с помощью команды
+   ```bash
+   sbin/start-master.sh
    ```
