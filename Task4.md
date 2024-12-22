@@ -32,7 +32,7 @@
 5. Сделаем проксирование на `nameNode`:
    Под пользователем `team` на `jumpNode` сделайте копию файла с помощью команды
    ```bash
-   `sudo cp /etc/nginx/sites-available/nn /etc/nginx/sites-available/sp`
+   sudo cp /etc/nginx/sites-available/nn /etc/nginx/sites-available/sp
    ```
    Отредактируйте конфигурационный, заменив номер порта на 8080. Создайте символическую ссылку с помощью команды
    `sudo ln -sf /etc/nginx/sites-available/sp /etc/nginx/sites-enabled/sp`
