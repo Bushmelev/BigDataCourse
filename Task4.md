@@ -43,3 +43,7 @@
    mkdir worker
    sbin/start-worker.sh spark://team-37-nn:7077 -d /home/hadoop/spark-3.5.4-bin-without-hadoop/worker -h team-37-nn
    ```
+7. Запустим интерактивный интерпретатор с помощью команды
+   ```bash
+   bin/spark-shell --master spark://team-37-nn:7077
+   ```
