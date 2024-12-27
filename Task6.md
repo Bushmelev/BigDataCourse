@@ -16,4 +16,4 @@
    ```bash
    scp .\companies.csv user@91.185.85.179:/home/user/team-37-data
    ```
-3. 
+3. На ВМ запустите ```psql -d idp```
