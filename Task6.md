@@ -12,4 +12,8 @@
    ```bash
    ssh user@91.185.85.179
    ```
-2. 
+2. Загрузите файлы на ВМ с помощью команды
+   ```bash
+   scp .\companies.csv user@91.185.85.179:/home/user/team-37-data
+   ```
+3. 
