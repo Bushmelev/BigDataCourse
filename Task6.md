@@ -40,5 +40,8 @@
    LOCATION('gpfdist://localhost:8037/team-37-data/companies.csv')
    FORMAT 'CSV' (DELIMITER ',' HEADER);
    ```
-4. Чтобы "раздать" таблицу, перейдите в папку, в которой находится файл companies.csv и выполните команду `gpfdist -p 8037`
-5. 
+4. Чтобы "раздать" таблицу выполните команду
+   ```bash
+   gpfdist -d /home/user/team-37-data -p 8037
+   ```
+6. 
