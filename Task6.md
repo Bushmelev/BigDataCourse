@@ -37,7 +37,7 @@
     current_assets text,
     last_accounts_period_end text,
     company_url text)
-   LOCATION('gpfdist://localhost:8037/team-37-data/companies.csv')
+   LOCATION('gpfdist://localhost:8037/companies.csv')
    FORMAT 'CSV' (DELIMITER ',' HEADER);
    ```
 4. Чтобы "раздать" таблицу выполните команду
