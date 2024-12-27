@@ -44,6 +44,10 @@
    ```bash
    gpfdist -d /home/user/team-37-data -p 8037
    ```
+5. Убедиться, что все работает можно с помощью команды
+   ```bash
+   SELECT * FROM team_37;
+   ```
 6. Создайте табличку в GreenPlum с помощью команды
    ```bash
    CREATE TABLE team_37_internal_table AS SELECT * FROM team_37;
