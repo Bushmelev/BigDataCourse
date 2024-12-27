@@ -37,6 +37,8 @@
     current_assets text,
     last_accounts_period_end text,
     company_url text)
-   LOCATION('gpfdist://localhost:8080/team-37-data/companies.csv')
+   LOCATION('gpfdist://localhost:8037/team-37-data/companies.csv')
    FORMAT 'CSV' (DELIMITER ',' HEADER);
    ```
+4. Чтобы "раздать" таблицу, перейдите в папку, в которой находится файл companies.csv и выполните команду `gpfdist -p 8037`
+5. 
