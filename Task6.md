@@ -38,7 +38,7 @@
     last_accounts_period_end text,
     company_url text)
    LOCATION('gpfdist://localhost:8037/companies.csv')
-   FORMAT 'CSV' (DELIMITER ',' HEADER);
+   FORMAT 'CSV' (DELIMITER ';' HEADER);
    ```
 4. Чтобы "раздать" таблицу выполните команду
    ```bash
