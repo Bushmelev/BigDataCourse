@@ -18,7 +18,7 @@
    ```
 3. На ВМ запустите ```psql -d idp``` и выполните
    ```bash
-   CREATE EXTERNAL TABLE team_37_external_table (
+   CREATE EXTERNAL TABLE team_37 (
     company_number text,
     company_type text,
     office_address text,
