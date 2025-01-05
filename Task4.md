@@ -45,7 +45,7 @@
    ```
 7. Если отсутвуют файлы для работы, необохимо их установить
 ```bash
-   wget https://raw.githubusercontent.com/ADBondarenko/BigDataProjectOPS/refs/heads/main/housing.csv](https://raw.githubusercontent.com/Bushmelev/BigDataCourse/refs/heads/main/california-housing.csv
+   wget https://raw.githubusercontent.com/Bushmelev/BigDataCourse/refs/heads/main/california-housing.csv
    hdfs dfs -put california-housing.csv /input
    ```
 8. Создадим файл hw4_script.py со следущим содержанием:
